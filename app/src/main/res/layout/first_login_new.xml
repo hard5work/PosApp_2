@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/depart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F32626"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/pos_nepal"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/depart"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
+            android:text="@string/username"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/spinUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user"
+            android:layout_marginTop="5dp">
+
+
+        </Spinner>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/spinUser"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/black" />
+
+        <EditText
+            android:id="@+id/userPass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/line2"
+            android:layout_marginTop="7dp"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userPass"
+            android:layout_margin="5dp"
+            android:background="@drawable/positive"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:textColor="@color/black"
+            android:hint="@string/server"
+            android:id="@+id/serverIP"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:padding="5dp"
+            android:drawableLeft="@drawable/router"
+            android:drawableStart="@drawable/router"
+            android:drawablePadding="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/square_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/submitServer"
+            android:layout_below="@+id/serverIP"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/positive"
+            android:textSize="20sp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

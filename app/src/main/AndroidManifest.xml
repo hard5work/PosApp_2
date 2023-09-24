@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/pos"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/pos"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <activity android:name="bonfire.app.pos.activities.CombinationActivity"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale"
+
+           />
+        <activity
+            android:name="bonfire.app.pos.activities.TableActivity"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale" />
+        <activity
+            android:name="bonfire.app.pos.activities.CartListActivity"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale" />
+        <activity
+            android:name="bonfire.app.pos.activities.ListDishesActivity"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale" />
+        <activity
+            android:name="bonfire.app.pos.activities.MainActivity"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="bonfire.app.pos.adapter.Checkings"
+            android:configChanges="screenSize|keyboardHidden|screenLayout|fontScale" />
+    </application>
+
+</manifest>
